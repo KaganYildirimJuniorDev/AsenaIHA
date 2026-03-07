@@ -1,1 +1,428 @@
-# AsenaIHA
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Asena İHA Takımı — İnsansız Hava Aracı geliştirme takımı. Misyonumuz, vizyonumuz ve ekibimiz hakkında bilgi edinin.">
+  <title>Asena İHA Takımı</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ========== Navbar ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/logo.jpeg" alt="Asena Logo" class="brand-logo">
+        ASENA
+        <span class="beta-badge">BETA</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" title="Tema Değiştir" aria-label="Tema Değiştir">
+        <i class="fas fa-sun theme-icon-light"></i>
+        <i class="fas fa-moon theme-icon-dark"></i>
+        <span class="toggle-slider"></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="active">Ana Sayfa</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#team">Ekibimiz</a>
+        <a href="#contact">İletişim</a>
+        <a href="api-panel.html" class="nav-cta"><i class="fas fa-terminal"></i> Uçuş/Kontrol</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== Hero ========== -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="floating-orb floating-orb-1"></div>
+    <div class="floating-orb floating-orb-2"></div>
+    <div class="floating-orb floating-orb-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Aksaray Üniversitesi Asena İHA Takımı
+      </div>
+      <img src="assets/logo.jpeg" alt="Asena İHA Logo" class="hero-logo">
+      <h1 class="hero-title">
+        <span class="gradient-text">ASENA</span><br>
+        İHA Takımı
+      </h1>
+      <p class="hero-description">
+        Aksaray Üniversitesi bünyesinde kurulan ekibimiz, otonom uçuş sistemleri,
+        yapay zeka destekli görüntü işleme ve ileri mühendislik çözümleriyle
+        yerli ve özgün insansız hava araçları geliştirmektedir.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value" data-count="10">0</div>
+          <div class="stat-label">Takım Üyesi</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" data-count="4">0</div>
+          <div class="stat-label">Alt Ekip</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" data-count="1">0</div>
+          <div class="stat-label">Teknofest Yarışması</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== About ========== -->
+  <section id="about" class="about-fullscreen">
+    <div class="container">
+      <h2 class="section-title reveal">Hakkımızda</h2>
+      <p class="section-subtitle reveal">Milli Teknoloji Hamlesi vizyonuyla, yerli ve özgün İHA sistemleri
+        geliştiriyoruz.</p>
+
+      <div class="about-three-col">
+        <!-- Sol: Logo/Görsel -->
+        <div class="about-col about-col-visual reveal-left">
+          <div class="drone-illustration">
+            <img src="assets/logo.jpeg" alt="Asena İHA Logo" class="about-logo">
+          </div>
+        </div>
+
+        <!-- Orta: Biz Kimiz -->
+        <div class="about-col about-col-text reveal">
+          <div class="about-who-card">
+            <div class="about-who-icon"><i class="fas fa-users"></i></div>
+            <h3>Biz Kimiz?</h3>
+            <p>
+              Asena İHA Takımı, 2025 yılında Aksaray Üniversitesi bünyesinde kurulmuş, yüksek disiplinli
+              bir AR-GE ekibidir. Milli Teknoloji Hamlesi vizyonuyla, yerli ve özgün İHA sistemleri
+              geliştirmeyi hedefler.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>2025'te Kuruldu</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-university"></i>
+                <span>Aksaray Üniversitesi</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-flag"></i>
+                <span>Milli Teknoloji</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ: Teknik Yetkinlikler -->
+        <div class="about-col about-col-skills reveal-right">
+          <h3 class="skills-title"><i class="fas fa-cogs"></i> Teknik Yetkinlikler</h3>
+          <div class="competency-list-compact">
+            <div class="competency-chip">
+              <div class="chip-icon"><i class="fas fa-route"></i></div>
+              <div>
+                <h4>Otonom Algoritmalar</h4>
+                <p>Waypoint navigasyonu ve görev planlama</p>
+              </div>
+            </div>
+            <div class="competency-chip">
+              <div class="chip-icon"><i class="fas fa-brain"></i></div>
+              <div>
+                <h4>Görüntü İşleme (AI)</h4>
+                <p>Nesne tespiti ve hedef takibi</p>
+              </div>
+            </div>
+            <div class="competency-chip">
+              <div class="chip-icon"><i class="fas fa-wind"></i></div>
+              <div>
+                <h4>Aerodinamik</h4>
+                <p>CFD analizi ve kanat optimizasyonu</p>
+              </div>
+            </div>
+            <div class="competency-chip">
+              <div class="chip-icon"><i class="fas fa-microchip"></i></div>
+              <div>
+                <h4>Aviyonik</h4>
+                <p>Uçuş kontrol ve sensör entegrasyonu</p>
+              </div>
+            </div>
+            <div class="competency-chip">
+              <div class="chip-icon"><i class="fas fa-code"></i></div>
+              <div>
+                <h4>Gömülü Yazılım</h4>
+                <p>Uçuş yazılımı ve telemetri altyapısı</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Team ========== -->
+  <section id="team">
+    <div class="container">
+      <h2 class="section-title reveal">Ekibimiz</h2>
+      <p class="section-subtitle reveal">Aksaray Üniversitesi Asena İHA Takımı, gökyüzüne mühendislik imzasını atıyor.
+        Geleceği tasarlayan ekibimizle tanışın.</p>
+
+      <!-- ── Takım Kaptanı (Hero Card) ── -->
+      <div class="team-captain-hero reveal">
+        <div class="captain-hero-card captain-hero-centered">
+          <div class="team-card-avatar captain-avatar">AK</div>
+          <div class="team-card-badge">👑 Takım Kaptanı</div>
+          <h3 class="team-card-name">Ali Kağan Yıldırım</h3>
+          <span class="team-card-role">Takım Kaptanı</span>
+          <p class="team-card-desc">Takım stratejisi, proje yönetimi ve otonom sistemler lideri. Görüntü işleme
+            teknolojileri üzerine uzmanlaşmış olup, ekip içi koordinasyonu sağlar.</p>
+          <div class="team-card-socials">
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Yazılım Ekibi ── -->
+      <div class="team-department reveal">
+        <div class="department-header">
+          <div class="department-icon"><i class="fas fa-code"></i></div>
+          <div>
+            <h3 class="department-title">Yazılım Ekibi</h3>
+            <p class="department-count">4 Üye</p>
+          </div>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal-scale captain-card">
+            <div class="team-card-badge">💻 Kaptan</div>
+            <div class="team-card-avatar"><img src="assets/team/tolga_fidan/WhatsApp Image 2026-02-23 at 11.56.56.jpeg"
+                alt="Tolga Fidan"></div>
+            <h3 class="team-card-name">Tolga Fidan</h3>
+            <span class="team-card-role">Yazılım Kaptanı</span>
+            <p class="team-card-desc">Web tabanlı API yönetim paneli, yer kontrol istasyonu arayüzü ve telemetri
+              altyapısı geliştirmektedir. Sistem entegrasyonu ve veri iletişim protokolleri üzerine çalışır.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-card reveal-scale">
+            <div class="team-card-avatar">BK</div>
+            <h3 class="team-card-name">Berkay Koçak</h3>
+            <span class="team-card-role">Yazılım Ekibi</span>
+            <p class="team-card-desc">Telemetri arayüzü geliştirme, otonom uçuş sistemleri ve C# ile masaüstü uygulama
+              geliştirme üzerine çalışmaktadır. JSON tabanlı API entegrasyonları ve veri işleme modülleri tasarlar.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-card reveal-scale">
+            <div class="team-card-avatar">SŞ</div>
+            <h3 class="team-card-name">Sinan Şamil Köylü</h3>
+            <span class="team-card-role">Yazılım Ekibi</span>
+            <p class="team-card-desc">Otonom uçuş algoritmaları geliştirme ve yol planlama sistemleri üzerine
+              çalışmaktadır.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-card reveal-scale">
+            <div class="team-card-avatar">HU</div>
+            <h3 class="team-card-name">Hakan Uluçar</h3>
+            <span class="team-card-role">Yazılım Ekibi</span>
+            <p class="team-card-desc">Yazılım geliştirme ve sistem optimizasyonu alanında çalışmaktadır. Takım yazılım
+              altyapısına katkı sağlar.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Makine Ekibi ── -->
+      <div class="team-department reveal">
+        <div class="department-header">
+          <div class="department-icon"><i class="fas fa-cogs"></i></div>
+          <div>
+            <h3 class="department-title">Makine Ekibi</h3>
+            <p class="department-count">2 Üye</p>
+          </div>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal-scale captain-card">
+            <div class="team-card-badge">⚙️ Kaptan</div>
+            <div class="team-card-avatar">KK</div>
+            <h3 class="team-card-name">Keremcem Köken</h3>
+            <span class="team-card-role">Makine Kaptanı</span>
+            <p class="team-card-desc">İHA aerodinamik tasarımı, 3D modelleme ve yapısal analiz çalışmalarını
+              yürütmektedir.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-card reveal-scale">
+            <div class="team-card-avatar">SA</div>
+            <h3 class="team-card-name">Samet Alkan</h3>
+            <span class="team-card-role">Makine Ekibi</span>
+            <p class="team-card-desc">İHA gövde üretimi ve montaj süreçleri üzerine çalışmaktadır.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Elk. & Elektronik Ekibi ── -->
+      <div class="team-department reveal">
+        <div class="department-header">
+          <div class="department-icon"><i class="fas fa-microchip"></i></div>
+          <div>
+            <h3 class="department-title">Elk. & Elektronik Ekibi</h3>
+            <p class="department-count">2 Üye</p>
+          </div>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal-scale captain-card">
+            <div class="team-card-badge">🔌 Kaptan</div>
+            <div class="team-card-avatar">CC</div>
+            <h3 class="team-card-name">Cemile Ceren Aker</h3>
+            <span class="team-card-role">Elektronik Kaptanı</span>
+            <p class="team-card-desc">Malzeme seçimi ve donanım montajı alanında çalışmaktadır.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="team-card reveal-scale">
+            <div class="team-card-avatar">İK</div>
+            <h3 class="team-card-name">İrem Kabay</h3>
+            <span class="team-card-role">Elk. Elektronik Ekibi</span>
+            <p class="team-card-desc">Güç dağıtım sistemleri, PCB tasarımı ve aviyonik entegrasyon çalışmalarını
+              yürütmektedir.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Organizasyon ── -->
+      <div class="team-department reveal">
+        <div class="department-header">
+          <div class="department-icon"><i class="fas fa-bullhorn"></i></div>
+          <div>
+            <h3 class="department-title">Organizasyon</h3>
+            <p class="department-count">1 Üye</p>
+          </div>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal-scale captain-card">
+            <div class="team-card-badge">📋 Kaptan</div>
+            <div class="team-card-avatar">DK</div>
+            <h3 class="team-card-name">Duygu Kılıç</h3>
+            <span class="team-card-role">Organizasyon Kaptanı</span>
+            <p class="team-card-desc">Kurumsal iletişim, sponsorluk yönetimi ve proje dökümantasyonu çalışmalarını
+              yürütmektedir.</p>
+            <div class="team-card-socials">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" title="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== Contact ========== -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">İletişim</h2>
+      <p class="section-subtitle reveal">Bizimle iletişime geçin, birlikte harika projeler geliştirelim.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Bize Ulaşın</h3>
+          <p>Sorularınız, önerileriniz veya iş birliği teklifleriniz için bize yazabilirsiniz.</p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="info-label">E-posta</div>
+              <div class="info-value">asenaihataakimi@mail.com</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="info-label">Konum</div>
+              <div class="info-value">Aksaray Üniversitesi, Aksaray</div>
+            </div>
+          </div>
+
+        </div>
+
+        <form class="contact-form reveal-right" onsubmit="event.preventDefault(); alert('Mesajınız gönderildi!');">
+          <div class="form-group">
+            <label for="contact-name">Adınız</label>
+            <input type="text" id="contact-name" placeholder="Adınızı girin" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">E-posta</label>
+            <input type="email" id="contact-email" placeholder="E-posta adresinizi girin" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Mesajınız</label>
+            <textarea id="contact-message" placeholder="Mesajınızı yazın..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Gönder
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-copy">&copy; 2026 Asena İHA Takımı. Tüm hakları saklıdır.</span>
+        <div class="footer-links">
+          <a href="#hero">Ana Sayfa</a>
+          <a href="#about">Hakkımızda</a>
+          <a href="#team">Ekibimiz</a>
+          <a href="api-panel.html">API Panel</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
