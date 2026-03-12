@@ -447,7 +447,8 @@ section {
   gap: 5px;
   cursor: pointer;
   padding: 6px;
-  z-index: 1001;
+  /* ensure the hamburger remains on top of the sliding nav panel */
+  z-index: 1006;
 }
 
 .nav-toggle span {
@@ -464,6 +465,11 @@ section {
 
 .nav-toggle.open span:nth-child(2) {
   opacity: 0;
+}
+
+.nav-toggle.open {
+  /* when open, keep toggle above panel so user can tap again */
+  z-index: 1007;
 }
 
 .nav-toggle.open span:nth-child(3) {
