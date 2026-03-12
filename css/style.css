@@ -1563,7 +1563,8 @@ section {
     transition: var(--transition-smooth);
     border-left: 1px solid var(--border-glass);
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.05);
-    z-index: 1002;
+    /* raise above anything else (including the toggle icons) */
+    z-index: 1005;
   }
 
   .nav-links.open {
@@ -1650,6 +1651,8 @@ section {
   transition: var(--transition-smooth);
   overflow: hidden;
   flex-shrink: 0;
+  /* ensure toggle stays underneath the sliding menu */
+  z-index: 1001;
 }
 
 .theme-toggle:hover {
@@ -1660,7 +1663,8 @@ section {
 .theme-toggle .theme-icon-light,
 .theme-toggle .theme-icon-dark {
   font-size: 0.7rem;
-  z-index: 1;
+  /* icons follow their parent stacking context; reduce to avoid overlap */
+  z-index: 0;
   transition: var(--transition-smooth);
   line-height: 1;
 }
