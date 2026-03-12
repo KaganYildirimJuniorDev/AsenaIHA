@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotoğraf Galerisi - Asena İHA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- reuse navbar markup from index.html -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html#hero" class="nav-brand">
+        <img src="assets/logo.jpeg" alt="Asena Logo" class="brand-logo">
+        ASENA
+        <span class="beta-badge">BETA</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" title="Tema Değiştir" aria-label="Tema Değiştir">
+        <i class="fas fa-sun theme-icon-light"></i>
+        <i class="fas fa-moon theme-icon-dark"></i>
+        <span class="toggle-slider"></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html#hero">Ana Sayfa</a>
+        <a href="index.html#about">Hakkımızda</a>
+        <a href="index.html#team">Ekibimiz</a>
+        <a href="gallery.html" class="active"><i class="fas fa-images"></i> Galeri</a>
+        <a href="index.html#contact">İletişim</a>
+        <a href="api-panel.html" class="nav-cta"><i class="fas fa-terminal"></i> Uçuş/Kontrol</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section id="gallery" class="container" style="padding:100px 0;">
+    <h2 class="section-title">Galeri</h2>
+    <p class="section-subtitle">`js/gallery.js` içindeki listeyi veya sayıyı güncelleyerek gösterilecek resimleri belirleyin.</p>
+    <div id="galleryGrid" class="gallery-grid">
+      <!-- JavaScript will populate this -->
+    </div>
+  </section>
+
+  <!-- lightbox/modal -->
+  <div id="galleryModal" onclick="closeModal()">
+    <span class="close-btn">&times;</span>
+    <img src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+
+</html>
