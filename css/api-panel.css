@@ -1690,6 +1690,17 @@ ul {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* ensure the sidebar toggle (hamburger) floats above the sliding panel */
+    #sidebarToggle {
+        display: block !important; /* shown via JS, but make sure */
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 200; /* above .sidebar (100) */
+    }
+
+    }
+
     .control-grid {
         grid-template-columns: 1fr;
     }

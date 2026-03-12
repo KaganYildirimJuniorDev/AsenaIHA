@@ -447,6 +447,10 @@ section {
   gap: 5px;
   cursor: pointer;
   padding: 6px;
+  /* fix to viewport so it isn't clipped by other stacking contexts */
+  position: fixed;
+  top: 20px;
+  right: 24px;
   /* ensure the hamburger remains on top of the sliding nav panel */
   z-index: 1006;
 }
@@ -470,6 +474,12 @@ section {
 .nav-toggle.open {
   /* when open, keep toggle above panel so user can tap again */
   z-index: 1007;
+}
+
+/* when fixed, don't let the toggle button shift position during open state */
+.nav-toggle.open span:nth-child(1),
+.nav-toggle.open span:nth-child(3) {
+  /* no additional positional offset needed */
 }
 
 .nav-toggle.open span:nth-child(3) {
